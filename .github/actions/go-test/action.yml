@@ -1,0 +1,10 @@
+name: "Run Go Tests"
+description: "Run Go tests with coverage in the Go directory"
+runs:
+  using: "composite"
+  steps:
+    - name: Go tests with coverage
+      shell: bash
+      working-directory: ./Go
+      run: |
+        go test -v -coverprofile="coverage.txt" -covermode=atomic ./...
