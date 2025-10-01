@@ -1,4 +1,4 @@
-name: CI/CD Pipeline
+name: Test
 
 on:
   push:
@@ -24,10 +24,3 @@ jobs:
     
     - name: Run Go tests
       uses: ./.github/actions/go-test
-    
-    - name: Upload coverage reports to Codecov
-      uses: codecov/codecov-action@v5
-      with:
-        token: ${{secrets.CODECOV_TOKEN}}
-        slug: ${{github.repository}}
-        file: ./Go/coverage.txt
