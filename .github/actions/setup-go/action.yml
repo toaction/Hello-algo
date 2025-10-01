@@ -1,0 +1,35 @@
+name: "Setup Go runtime env"
+inputs:
+  go:
+    description: "Go version to install"
+    default: "1.25"
+runs:
+  using: "composite"
+  steps:
+    - name: Setup Go
+      uses: actions/setup-go@v4
+      with:
+        go-version: ${{ inputs.go }}
+    
+    - name: Verify Go installation
+      shell: bash
+      run: |
+        echo "Go version:"
+        go version
+        echo "Go environment:"
+        go env GOPATH
+        go env GOROOT
+    
+    - name: Download dependencies
+      shell: bash
+      working-directory: ./Go
+      run: |
+        echo "Downloading Go module dependencies..."
+        go mod download
+    
+    - name: Verify dependencies
+      shell: bash
+      working-directory: ./Go
+      run: |
+        echo "Verifying Go module dependencies..."
+        go mod verify
