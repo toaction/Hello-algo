@@ -21,3 +21,10 @@
 - [560. 和为 K 的子数组](./subString/subarraySum.go)
 - [239. 滑动窗口最大值](./subString/maxSlidingWindow.go)
 - [76. 最小覆盖子串](./subString/minWindow.go)
+
+### 普通数组
+- [53. 最大子数组和](./normalArray/maxSubArray.go)
+- [56. 合并区间](./normalArray/merge.go)
+- [189. 轮转数组](./normalArray/rotate.go)
+- [238. 除自身以外数组的乘积](./normalArray/productExceptSelf.go)
+- [41. 缺失的第一个正数](./normalArray/firstMissingPositive.go)
