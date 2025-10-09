@@ -28,3 +28,9 @@
 - [189. 轮转数组](./normalArray/rotate.go)
 - [238. 除自身以外数组的乘积](./normalArray/productExceptSelf.go)
 - [41. 缺失的第一个正数](./normalArray/firstMissingPositive.go)
+
+### 矩阵
+- [73. 矩阵置零](./matrix/setZeroes.go)
+- [54. 螺旋矩阵](./matrix/spiralOrder.go)
+- [48. 旋转图像](./matrix/rotate.go)
+- [240. 搜索二维矩阵 II](./matrix/searchMatrix.go)
