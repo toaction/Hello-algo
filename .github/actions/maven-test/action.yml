@@ -1,0 +1,10 @@
+name: "Run Maven Tests"
+description: "Run Maven tests with coverage in the Java directory"
+runs:
+  using: "composite"
+  steps:
+    - name: Maven tests with coverage
+      shell: bash
+      working-directory: ./Java
+      run: |
+        mvn clean test

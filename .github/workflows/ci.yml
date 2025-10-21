@@ -7,20 +7,39 @@ on:
     branches: ["**"]
 
 jobs:
-  test:
+  test-go:
     runs-on: ubuntu-latest
     strategy:
       matrix:
         go: [1.25]
-    
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-    
+
     - name: Setup Go environment
       uses: ./.github/actions/setup-go
       with:
         go: ${{ matrix.go }}
-    
+
     - name: Run Go tests
       uses: ./.github/actions/go-test
+
+  test-java:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        java: [8]
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Java environment
+      uses: ./.github/actions/setup-java
+      with:
+        java: ${{ matrix.java }}
+
+    - name: Run Maven tests
+      uses: ./.github/actions/maven-test
+
