@@ -1,0 +1,36 @@
+name: "Setup Java runtime env"
+inputs:
+  java:
+    description: "Java version to install"
+    default: "8"
+runs:
+  using: "composite"
+  steps:
+    - name: Setup Java
+      uses: actions/setup-java@v4
+      with:
+        java-version: ${{ inputs.java }}
+        distribution: 'temurin'
+        cache: 'maven'
+
+    - name: Verify Java installation
+      shell: bash
+      run: |
+        echo "Java version:"
+        java -version
+        echo "Maven version:"
+        mvn -version
+
+    - name: Download dependencies
+      shell: bash
+      working-directory: ./Java
+      run: |
+        echo "Downloading Maven dependencies..."
+        mvn dependency:resolve
+
+    - name: Verify dependencies
+      shell: bash
+      working-directory: ./Java
+      run: |
+        echo "Verifying Maven dependencies..."
+        mvn dependency:tree
