@@ -109,3 +109,72 @@ func TestRemoveNthFromEnd(t *testing.T) {
 		})
 	}
 }
+
+// TestHasCycle tests the HasCycle function
+func TestHasCycle(t *testing.T) {
+	tests := []struct {
+		name string
+		vals []int
+		pos  int
+		want bool
+	}{
+		{
+			name: "linked list with cycle",
+			vals: []int{3, 2, 0, -4},
+			pos:  1,
+			want: true,
+		},
+		{
+			name: "linked list without cycle",
+			vals: []int{1, 2, 3, 4, 5},
+			pos:  -1,
+			want: false,
+		},
+		{
+			name: "empty list",
+			vals: []int{},
+			pos:  -1,
+			want: false,
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			head := createCycleList(tt.vals, tt.pos)
+			got := HasCycle(head)
+			if got != tt.want {
+				t.Errorf("HasCycle() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
+
+// createCycleList creates a linked list with a cycle at the given position
+// pos is the index where the tail connects to. pos = -1 means no cycle.
+func createCycleList(vals []int, pos int) *ListNode {
+	if len(vals) == 0 {
+		return nil
+	}
+
+	head := &ListNode{Val: vals[0]}
+	cur := head
+	var cycleNode *ListNode
+
+	if pos == 0 {
+		cycleNode = head
+	}
+
+	for i := 1; i < len(vals); i++ {
+		cur.Next = &ListNode{Val: vals[i]}
+		cur = cur.Next
+		if i == pos {
+			cycleNode = cur
+		}
+	}
+
+	if pos >= 0 && cycleNode != nil {
+		cur.Next = cycleNode
+	}
+
+	return head
+}
