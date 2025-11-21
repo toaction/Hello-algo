@@ -5,6 +5,12 @@
 - [删除链表的倒数第 N 个节点](./linkedlist/remove_nth_from_end.go)
 - [环形链表](./linkedlist/has_cycle.go)
 
+## 栈
+- [有效的括号](./stack/valid_parentheses.go)
+- [最小栈](./stack/min_stack.go)
+- [每日温度](./stack/daily_temperatures.go)
+
+
 ## 贪心
 - [买卖股票的最佳时机](./greed/max_profit.go)
 - [跳跃游戏](./greed/jump_game.go)
