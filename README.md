@@ -1,5 +1,10 @@
 # Hello-algo
 
+## 哈希
+- [两数之和](./hash/two_sum.go)
+- [字母异位词分组](./hash/group_anagrams.go)
+- [最长连续序列](./hash/longest_consecutive.go)
+
 ## 链表
 - [两数相加](./linkedlist/add_two_numbers.go)
 - [删除链表的倒数第 N 个节点](./linkedlist/remove_nth_from_end.go)
