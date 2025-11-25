@@ -5,6 +5,12 @@
 - [字母异位词分组](./hash/group_anagrams.go)
 - [最长连续序列](./hash/longest_consecutive.go)
 
+## 双指针
+- [移动零](./doublepointer/move_zeros.go)
+- [盛最多水的容器](./doublepointer/most_water.go)
+- [三数之和](./doublepointer/three_sum.go)
+- [接雨水](./doublepointer/trap_water.go)
+
 ## 链表
 - [两数相加](./linkedlist/add_two_numbers.go)
 - [删除链表的倒数第 N 个节点](./linkedlist/remove_nth_from_end.go)
