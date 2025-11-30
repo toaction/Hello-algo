@@ -13,15 +13,15 @@ package substring
 //
 // 解题思路：前缀和 + 哈希表
 func SubarraySum(nums []int, k int) int {
-	// 从数组开头到当前位置的累计和
-	ans, sum := 0, 0
-	// 前缀和：个数
-	count := map[int]int{}
-	for _, num := range nums {
-		count[sum]++
-		sum += num
-		// sum [i, cur] = k, (0<=i<cur)
-		ans += count[sum-k]
-	}
-	return ans
+    // sum: 从数组开头到当前位置的累计和
+    ans, sum := 0, 0
+    // 前缀和：个数 (前缀和不包含 nums[i] 本身)
+    count := map[int]int{}
+    for _, num := range nums {
+        count[sum]++
+        sum += num
+        // 子数组 nums[i, cur] 的和 == k
+        ans += count[sum - k]
+    }
+    return ans
 }
