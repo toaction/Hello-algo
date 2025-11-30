@@ -1,5 +1,14 @@
 # Hello-algo
 
+## 排序
+- [冒泡排序](./sort/bubble_sort.go)
+- [选择排序](./sort/select_sort.go)
+- [插入排序](./sort/insertion_sort.go)
+- [快速排序](./sort/quick_sort.go)
+- [归并排序](./sort/merge_sort.go)
+- [堆排序](./sort/heap_sort.go)
+
+
 ## 哈希
 - [两数之和](./hash/two_sum.go)
 - [字母异位词分组](./hash/group_anagrams.go)
