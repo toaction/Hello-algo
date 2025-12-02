@@ -69,3 +69,89 @@ func TestMaxSubArrayBaseDP(t *testing.T) {
 		})
 	}
 }
+
+func TestRotate(t *testing.T) {
+	tests := []struct {
+		name string
+		nums []int
+		k    int
+		want []int
+	}{
+		{
+			name: "standard example",
+			nums: []int{1, 2, 3, 4, 5, 6, 7},
+			k:    3,
+			want: []int{5, 6, 7, 1, 2, 3, 4},
+		},
+		{
+			name: "k larger than length",
+			nums: []int{1, 2, 3, 4},
+			k:    6,
+			want: []int{3, 4, 1, 2},
+		},
+		{
+			name: "k is zero",
+			nums: []int{1, 2, 3, 4},
+			k:    0,
+			want: []int{1, 2, 3, 4},
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			input := make([]int, len(tt.nums))
+			copy(input, tt.nums)
+			Rotate(input, tt.k)
+			if !equalSlices(input, tt.want) {
+				t.Errorf("Rotate() = %v, want %v", input, tt.want)
+			}
+		})
+	}
+}
+
+func TestFirstMissingPositive(t *testing.T) {
+	tests := []struct {
+		name string
+		nums []int
+		want int
+	}{
+		{
+			name: "standard example",
+			nums: []int{1, 2, 0},
+			want: 3,
+		},
+		{
+			name: "contains 1 and 3",
+			nums: []int{3, 4, -1, 1},
+			want: 2,
+		},
+		{
+			name: "all negative",
+			nums: []int{-1, -2, -3},
+			want: 1,
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			input := make([]int, len(tt.nums))
+			copy(input, tt.nums)
+			got := FirstMissingPositive(input)
+			if got != tt.want {
+				t.Errorf("FirstMissingPositive() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
+
+func equalSlices(a, b []int) bool {
+	if len(a) != len(b) {
+		return false
+	}
+	for i := range a {
+		if a[i] != b[i] {
+			return false
+		}
+	}
+	return true
+}
