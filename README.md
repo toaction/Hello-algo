@@ -19,3 +19,9 @@
 - [划分字母区间](./greed/partition_labels.go)
 - [跳跃游戏](./greed/can_jump.go)
 - [跳跃游戏 II](./greed/min_time_jump.go)
+
+## 图论
+- [课程表](./graph/course_study.go)
+- [岛屿数量](./graph/island_nums.go)
+- [腐烂的橘子](./graph/rotten_orange.go)
+- [实现 Trie (前缀树)](./graph/trie.go)
