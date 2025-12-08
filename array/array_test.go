@@ -144,12 +144,80 @@ func TestFirstMissingPositive(t *testing.T) {
 	}
 }
 
+func TestMerge(t *testing.T) {
+	tests := []struct {
+		name      string
+		intervals [][]int
+		want      [][]int
+	}{
+		{
+			name: "standard leetcode example",
+			intervals: [][]int{
+				{1, 3},
+				{2, 6},
+				{8, 10},
+				{15, 18},
+			},
+			want: [][]int{
+				{1, 6},
+				{8, 10},
+				{15, 18},
+			},
+		},
+		{
+			name: "all overlapping intervals",
+			intervals: [][]int{
+				{1, 4},
+				{2, 5},
+				{3, 6},
+			},
+			want: [][]int{
+				{1, 6},
+			},
+		},
+		{
+			name: "no overlapping intervals",
+			intervals: [][]int{
+				{1, 2},
+				{3, 4},
+				{5, 6},
+			},
+			want: [][]int{
+				{1, 2},
+				{3, 4},
+				{5, 6},
+			},
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			got := Merge(tt.intervals)
+			if !equalIntervals(got, tt.want) {
+				t.Errorf("Merge() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
+
 func equalSlices(a, b []int) bool {
 	if len(a) != len(b) {
 		return false
 	}
 	for i := range a {
 		if a[i] != b[i] {
+			return false
+		}
+	}
+	return true
+}
+
+func equalIntervals(a, b [][]int) bool {
+	if len(a) != len(b) {
+		return false
+	}
+	for i := range a {
+		if !equalSlices(a[i], b[i]) {
 			return false
 		}
 	}
