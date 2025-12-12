@@ -35,6 +35,12 @@
 - [合并区间](./array/merge_intervals.go)
 - [除自身以外数组的乘积](./array/product_except_self.go)
 
+## 矩阵
+- [旋转图像](./matrix/rotate_matrix.go)
+- [搜索二维矩阵 II](./matrix/search_matrix.go)
+- [矩阵置零](./matrix/set_zeros.go)
+- [螺旋矩阵](./matrix/spiral_matrix.go)
+
 ## 贪心
 - [买卖股票的最佳时机](./greed/max_profit.go)
 - [划分字母区间](./greed/partition_labels.go)
