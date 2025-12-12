@@ -28,6 +28,13 @@
 - [最小覆盖子串](./substring/min_window.go)
 - [和为 K 的子数组](./substring/subarray_sum_k.go)
 
+## 普通数组
+- [最大子数组和](./array/max_sum_subarray.go)
+- [缺失的第一个正数](./array/first_missing_positive.go)
+- [轮转数组](./array/rotate_array.go)
+- [合并区间](./array/merge_intervals.go)
+- [除自身以外数组的乘积](./array/product_except_self.go)
+
 ## 贪心
 - [买卖股票的最佳时机](./greed/max_profit.go)
 - [划分字母区间](./greed/partition_labels.go)

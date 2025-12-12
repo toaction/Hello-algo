@@ -144,6 +144,39 @@ func TestFirstMissingPositive(t *testing.T) {
 	}
 }
 
+func TestProductExceptSelf(t *testing.T) {
+	tests := []struct {
+		name string
+		nums []int
+		want []int
+	}{
+		{
+			name: "standard leetcode example",
+			nums: []int{1, 2, 3, 4},
+			want: []int{24, 12, 8, 6},
+		},
+		{
+			name: "contains zero",
+			nums: []int{-1, 1, 0, -3, 3},
+			want: []int{0, 0, 9, 0, 0},
+		},
+		{
+			name: "single element",
+			nums: []int{5},
+			want: []int{1},
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			got := ProductExceptSelf(tt.nums)
+			if !equalSlices(got, tt.want) {
+				t.Errorf("ProductExceptSelf() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
+
 func TestMerge(t *testing.T) {
 	tests := []struct {
 		name      string
