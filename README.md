@@ -23,6 +23,11 @@
 - [无重复字符的最长子串](./slidewindow/longest_substring.go)
 - [找到字符串中所有字母异位词](./slidewindow/find_anagrams.go)
 
+## 子串
+- [滑动窗口最大值](./substring/max_sliding_window.go)
+- [最小覆盖子串](./substring/min_window.go)
+- [和为 K 的子数组](./substring/subarray_sum_k.go)
+
 ## 贪心
 - [买卖股票的最佳时机](./greed/max_profit.go)
 - [划分字母区间](./greed/partition_labels.go)
