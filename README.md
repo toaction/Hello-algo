@@ -14,6 +14,12 @@
 - [字母异位词分组](./hash/group_anagrams.go)
 - [最长连续序列](./hash/longest_consecutive.go)
 
+## 双指针
+- [盛最多水的容器](./doublepointer/most_water.go)
+- [三数之和](./doublepointer/three_sum.go)
+- [接雨水](./doublepointer/trap_water.go)
+- [移动零](./doublepointer/move_zeros.go)
+
 ## 贪心
 - [买卖股票的最佳时机](./greed/max_profit.go)
 - [划分字母区间](./greed/partition_labels.go)
