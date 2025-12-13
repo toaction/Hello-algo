@@ -41,6 +41,21 @@
 - [矩阵置零](./matrix/set_zeros.go)
 - [螺旋矩阵](./matrix/spiral_matrix.go)
 
+## 链表
+- [两数相加](./linkedlist/add_two_numbers.go)
+- [删除链表的倒数第 N 个节点](./linkedlist/remove_nth_from_end.go)
+- [环形链表](./linkedlist/has_cycle.go)
+- [环形链表II](./linkedlist/cycle_first_node.go)
+- [相交链表](./linkedlist/intersection_node.go)
+- [合并两个有序链表](./linkedlist/merge_two_sorted.go)
+- [合并 K 个升序链表](./linkedlist/merge_k_sorted.go)
+- [排序链表](./linkedlist/sort_list.go)
+- [反转链表](./linkedlist/reverse.go)
+- [K 个一组翻转链表](./linkedlist/reverse_k_group.go)
+- [两两交换链表中的节点](./linkedlist/swap_pairs.go)
+- [回文链表](./linkedlist/palindrome.go)
+- [LRU 缓存](./linkedlist/lru_cache.go)
+
 ## 贪心
 - [买卖股票的最佳时机](./greed/max_profit.go)
 - [划分字母区间](./greed/partition_labels.go)
