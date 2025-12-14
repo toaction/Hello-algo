@@ -1,19 +1,16 @@
 package stack
 
-// 20. 有效的括号
-//
-// https://leetcode.cn/problems/valid-parentheses/
-//
-// 给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串 s ，判断字符串是否有效。
-//
-// 示例 1：
-//
-//	输入：s = "()"
-//	输出：true
-//
-// 思路：
-//
-//	使用栈存放左括号，遇到右括号弹出栈顶元素，查看是否匹配
+/*
+20. 有效的括号: https://leetcode.cn/problems/valid-parentheses/
+
+给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串 s ，判断字符串是否有效。
+
+示例 1：
+	输入：s = "()"
+	输出：true
+*/
+
+// 使用栈存放左括号，遇到右括号弹出栈顶元素，查看是否匹配
 func IsValid(s string) bool {
 	pairs := map[byte]byte{
 		'(': ')',

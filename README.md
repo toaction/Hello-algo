@@ -62,6 +62,13 @@
 - [二叉树的后序遍历](./tree/postorder_traversal.go)
 - [二叉树的层序遍历](./tree/levelorder_traversal.go)
 
+## 栈
+- [有效的括号](./stack/valid_parentheses.go)
+- [最小栈](./stack/min_stack.go)
+- [每日温度](./stack/daily_temperatures.go)
+- [字符串解码](./stack/decode_string.go)
+- [柱状图中最大的矩形](./stack/largest_rectangle_area.go)
+
 ## 贪心
 - [买卖股票的最佳时机](./greed/max_profit.go)
 - [划分字母区间](./greed/partition_labels.go)

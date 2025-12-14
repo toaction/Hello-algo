@@ -110,3 +110,69 @@ func TestDailyTemperatures(t *testing.T) {
 		})
 	}
 }
+
+func TestDecodeString(t *testing.T) {
+	tests := []struct {
+		name string
+		s    string
+		want string
+	}{
+		{
+			name: "simple encoded string",
+			s:    "3[a]2[bc]",
+			want: "aaabcbc",
+		},
+		{
+			name: "nested encoded string",
+			s:    "3[a2[c]]",
+			want: "accaccacc",
+		},
+		{
+			name: "complex nested string",
+			s:    "2[abc]3[cd]ef",
+			want: "abcabccdcdcdef",
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			got := DecodeString(tt.s)
+			if got != tt.want {
+				t.Errorf("DecodeString() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
+
+func TestLargestRectangleArea(t *testing.T) {
+	tests := []struct {
+		name    string
+		heights []int
+		want    int
+	}{
+		{
+			name:    "basic example",
+			heights: []int{2, 1, 5, 6, 2, 3},
+			want:    10,
+		},
+		{
+			name:    "all equal heights",
+			heights: []int{2, 2, 2, 2},
+			want:    8,
+		},
+		{
+			name:    "increasing heights",
+			heights: []int{1, 2, 3, 4, 5},
+			want:    9,
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			got := LargestRectangleArea(tt.heights)
+			if got != tt.want {
+				t.Errorf("LargestRectangleArea() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
