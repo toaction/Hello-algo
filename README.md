@@ -56,6 +56,12 @@
 - [回文链表](./linkedlist/palindrome.go)
 - [LRU 缓存](./linkedlist/lru_cache.go)
 
+## 二叉树
+- [二叉树的中序遍历](./tree/inorder_traversal.go)
+- [二叉树的前序遍历](./tree/preorder_traversal.go)
+- [二叉树的后序遍历](./tree/postorder_traversal.go)
+- [二叉树的层序遍历](./tree/levelorder_traversal.go)
+
 ## 贪心
 - [买卖股票的最佳时机](./greed/max_profit.go)
 - [划分字母区间](./greed/partition_labels.go)
