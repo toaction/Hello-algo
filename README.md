@@ -62,6 +62,16 @@
 - [二叉树的后序遍历](./tree/postorder_traversal.go)
 - [二叉树的层序遍历](./tree/levelorder_traversal.go)
 
+## 回溯
+- [全排列](./backtrack/permutations.go)
+- [子集](./backtrack/subsets.go)
+- [组合总和](./backtrack/combination_sum.go)
+- [括号生成](./backtrack/generate_parentheses.go)
+- [单词搜索](./backtrack/word_search.go)
+- [分割回文串](./backtrack/partition_palindrome.go)
+- [N 皇后](./backtrack/n_queens.go)
+- [电话号码的字母组合](./backtrack/letter_combination.go)
+
 ## 栈
 - [有效的括号](./stack/valid_parentheses.go)
 - [最小栈](./stack/min_stack.go)
