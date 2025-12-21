@@ -72,6 +72,14 @@
 - [N 皇后](./backtrack/n_queens.go)
 - [电话号码的字母组合](./backtrack/letter_combination.go)
 
+## 二分查找
+- [搜索插入位置](./binarysearch/search_insert.go)
+- [搜索二维矩阵](./binarysearch/search_matrix.go)
+- [在排序数组中查找元素的第一个和最后一个位置](./binarysearch/search_range.go)
+- [寻找两个正序数组的中位数](./binarysearch/find_median.go)
+- [搜索旋转排序数组](./binarysearch/search_rotate.go)
+- [寻找旋转排序数组中的最小值](./binarysearch/search_rotate_min.go)
+
 ## 栈
 - [有效的括号](./stack/valid_parentheses.go)
 - [最小栈](./stack/min_stack.go)

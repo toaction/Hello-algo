@@ -1,0 +1,44 @@
+package binarysearch
+
+/*
+33. 搜索旋转排序数组：https://leetcode.cn/problems/search-in-rotated-sorted-array/
+
+整数数组 nums 按升序排列，数组中的值 互不相同 。
+在传递给函数之前，nums 在预先未知的某个下标 k（0 <= k < nums.length）上进行了 向左旋转，
+使数组变为 [nums[k], nums[k+1], ..., nums[n-1], nums[0], nums[1], ..., nums[k-1]]（下标 从 0 开始 计数）。
+例如， [0,1,2,4,5,6,7] 下标 3 上向左旋转后可能变为 [4,5,6,7,0,1,2] 。
+给你 旋转后 的数组 nums 和一个整数 target ，如果 nums 中存在这个目标值 target ，则返回它的下标，否则返回 -1 。
+
+示例 1：
+	输入：nums = [4,5,6,7,0,1,2], target = 0
+	输出：4
+*/
+
+// 每次二分都会得到至少一个顺序区间
+// 在有序数组中用二分查找算法
+func SearchRotate(nums []int, target int) int {
+	left, right := 0, len(nums)-1
+	for left <= right {
+		mid := left + (right-left)/2
+		if nums[mid] == target {
+			return mid
+		}
+		// [left, mid] 有序，递增
+		if nums[mid] >= nums[left] {
+			// target 在 nums[left, mid) 中
+			if nums[left] <= target && target < nums[mid] {
+				right = mid - 1
+			} else {
+				left = mid + 1
+			}
+		} else { // [mid, right] 有序，递增
+			// target 在 nums(mid, right] 中
+			if nums[mid] < target && target <= nums[right] {
+				left = mid + 1
+			} else {
+				right = mid - 1
+			}
+		}
+	}
+	return -1
+}
