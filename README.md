@@ -98,3 +98,10 @@
 - [岛屿数量](./graph/island_nums.go)
 - [腐烂的橘子](./graph/rotten_orange.go)
 - [实现 Trie (前缀树)](./graph/trie.go)
+
+## 技巧
+- [寻找重复数](./skill/find_duplicate.go)
+- [多数元素](./skill/majority_element.go)
+- [下一个排列](./skill/next_permutation.go)
+- [只出现一次的数字](./skill/single_number.go)
+- [颜色分类](./skill/sort_colors.go)
